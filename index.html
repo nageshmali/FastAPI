@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fetchMessage()">Call API</button>
+    <p id="result"></p>
+
+
+    <script>
+        async function fetchMessage(){
+            const res = await fetch("http://127.0.0.1:8000/message");
+            const data = await res.json();
+            document.getElementById("result").innerHTML = data.message
+
+        }
+    </script>
+
+    
+</body>
+</html>
