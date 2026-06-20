@@ -88,3 +88,6 @@ class User(BaseModel):
 @app.post("/create-user")
 def create_user(user:User):
     return user
+
+
+# Now we will learn CRUD app
